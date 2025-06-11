@@ -1,0 +1,876 @@
+2025-06-08 11:15:04,324 INFO    : Loaded configure file alignment: a57facb3-a308-491d-a08a-9693f943c8d0
+2025-06-08 11:15:04,324 INFO    : 
+type: alignment
+id: a57facb3-a308-491d-a08a-9693f943c8d0
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f70a9d92f60>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_a57facb3-a308-491d-a08a-9693f943c8d0
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_a57facb3-a308-491d-a08a-9693f943c8d0
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_a57facb3-a308-491d-a08a-9693f943c8d0/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_a57facb3-a308-491d-a08a-9693f943c8d0/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:17:26,579 INFO    : Loaded configure file alignment: 56e251eb-42e4-4984-a3db-f0e952e96ce1
+2025-06-08 11:17:26,580 INFO    : 
+type: alignment
+id: 56e251eb-42e4-4984-a3db-f0e952e96ce1
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f35d247c980>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_56e251eb-42e4-4984-a3db-f0e952e96ce1
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_56e251eb-42e4-4984-a3db-f0e952e96ce1
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_56e251eb-42e4-4984-a3db-f0e952e96ce1/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_56e251eb-42e4-4984-a3db-f0e952e96ce1/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:19:57,868 INFO    : Loaded configure file alignment: 4182792d-ff05-4e79-93f7-9452d0732de3
+2025-06-08 11:19:57,869 INFO    : 
+type: alignment
+id: 4182792d-ff05-4e79-93f7-9452d0732de3
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f6d63c18ec0>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_4182792d-ff05-4e79-93f7-9452d0732de3
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_4182792d-ff05-4e79-93f7-9452d0732de3
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_4182792d-ff05-4e79-93f7-9452d0732de3/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_4182792d-ff05-4e79-93f7-9452d0732de3/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:21:09,354 INFO    : Loaded configure file alignment: 63111298-89ad-4fdd-91fa-21495a7685de
+2025-06-08 11:21:09,354 INFO    : 
+type: alignment
+id: 63111298-89ad-4fdd-91fa-21495a7685de
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f2fea57d040>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_63111298-89ad-4fdd-91fa-21495a7685de
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_63111298-89ad-4fdd-91fa-21495a7685de
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_63111298-89ad-4fdd-91fa-21495a7685de/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_63111298-89ad-4fdd-91fa-21495a7685de/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:23:41,142 INFO    : Loaded configure file alignment: dcbb7182-51f4-482c-83ce-b17b864ff1f9
+2025-06-08 11:23:41,142 INFO    : 
+type: alignment
+id: dcbb7182-51f4-482c-83ce-b17b864ff1f9
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f2aa71b2cc0>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_dcbb7182-51f4-482c-83ce-b17b864ff1f9
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_dcbb7182-51f4-482c-83ce-b17b864ff1f9
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_dcbb7182-51f4-482c-83ce-b17b864ff1f9/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_dcbb7182-51f4-482c-83ce-b17b864ff1f9/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:27:41,078 INFO    : Loaded configure file alignment: fecf5c61-620e-4e9a-8300-609c5ca37349
+2025-06-08 11:27:41,078 INFO    : 
+type: alignment
+id: fecf5c61-620e-4e9a-8300-609c5ca37349
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f7a2ed3fec0>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_fecf5c61-620e-4e9a-8300-609c5ca37349
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_fecf5c61-620e-4e9a-8300-609c5ca37349
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_fecf5c61-620e-4e9a-8300-609c5ca37349/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_fecf5c61-620e-4e9a-8300-609c5ca37349/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:32:41,993 INFO    : Loaded configure file alignment: 3dd3d45c-be2d-4c26-9dde-7f0bc8416107
+2025-06-08 11:32:41,993 INFO    : 
+type: alignment
+id: 3dd3d45c-be2d-4c26-9dde-7f0bc8416107
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f7341caaf60>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_3dd3d45c-be2d-4c26-9dde-7f0bc8416107
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_3dd3d45c-be2d-4c26-9dde-7f0bc8416107
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_3dd3d45c-be2d-4c26-9dde-7f0bc8416107/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_3dd3d45c-be2d-4c26-9dde-7f0bc8416107/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:40:44,795 INFO    : Loaded configure file alignment: f8315ecc-a131-4778-bd89-67cd7428f4de
+2025-06-08 11:40:44,796 INFO    : 
+type: alignment
+id: f8315ecc-a131-4778-bd89-67cd7428f4de
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7febf2d4e3c0>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_f8315ecc-a131-4778-bd89-67cd7428f4de
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_f8315ecc-a131-4778-bd89-67cd7428f4de
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_f8315ecc-a131-4778-bd89-67cd7428f4de/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_f8315ecc-a131-4778-bd89-67cd7428f4de/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:48:44,286 INFO    : Loaded configure file alignment: 9cbd1093-d686-4d0f-95e9-6563f24092eb
+2025-06-08 11:48:44,287 INFO    : 
+type: alignment
+id: 9cbd1093-d686-4d0f-95e9-6563f24092eb
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7fb2e2baaf60>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_9cbd1093-d686-4d0f-95e9-6563f24092eb
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_9cbd1093-d686-4d0f-95e9-6563f24092eb
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_9cbd1093-d686-4d0f-95e9-6563f24092eb/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_9cbd1093-d686-4d0f-95e9-6563f24092eb/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:53:02,762 INFO    : Loaded configure file alignment: 839bf965-50cd-45f0-93d4-7fbdd8991c55
+2025-06-08 11:53:02,762 INFO    : 
+type: alignment
+id: 839bf965-50cd-45f0-93d4-7fbdd8991c55
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f914486fe60>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_839bf965-50cd-45f0-93d4-7fbdd8991c55
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_839bf965-50cd-45f0-93d4-7fbdd8991c55
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_839bf965-50cd-45f0-93d4-7fbdd8991c55/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_839bf965-50cd-45f0-93d4-7fbdd8991c55/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:59:18,568 INFO    : Loaded configure file alignment: 50d2422a-19a0-4471-9a9a-7e3f4385f1bc
+2025-06-08 11:59:18,568 INFO    : 
+type: alignment
+id: 50d2422a-19a0-4471-9a9a-7e3f4385f1bc
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7f934c4aaf60>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_50d2422a-19a0-4471-9a9a-7e3f4385f1bc
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_50d2422a-19a0-4471-9a9a-7e3f4385f1bc
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_50d2422a-19a0-4471-9a9a-7e3f4385f1bc/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_50d2422a-19a0-4471-9a9a-7e3f4385f1bc/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
+2025-06-08 11:59:45,653 INFO    : Loaded configure file alignment: c48a40b8-f66b-4879-a599-20459d51b621
+2025-06-08 11:59:45,653 INFO    : 
+type: alignment
+id: c48a40b8-f66b-4879-a599-20459d51b621
+note: 
+ckpt_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR
+image_dir: ./WFLW/WFLW_images
+annot_dir: ./
+loader_type: alignment
+loss_func: STARLoss_v2
+batch_size: 32
+val_batch_size: 32
+test_batch_size: 16
+channels: 3
+width: 256
+height: 256
+means: (127.5, 127.5, 127.5)
+scale: 0.00784313725490196
+display_iteration: 10
+milestones: [200, 350, 450]
+max_epoch: 500
+net: stackedHGnet_v1
+nstack: 4
+optimizer: adam
+learn_rate: 0.001
+momentum: 0.01
+weight_decay: 1e-05
+nesterov: False
+scheduler: MultiStepLR
+gamma: 0.1
+loss_weights: [0.125, 1.25, 1.25, 0.25, 2.5, 2.5, 0.5, 5.0, 5.0, 1.0, 10.0, 10.0]
+criterions: ['STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss', 'STARLoss_v2', 'AWingLoss', 'AWingLoss']
+metrics: ['NME', None, None, 'NME', None, None, 'NME', None, None, 'NME', None, None]
+key_metric_index: 9
+classes_num: [98, 9, 98]
+label_num: 12
+ema: True
+use_AAM: True
+writer: <tensorboardX.writer.SummaryWriter object at 0x7fc5ae494b60>
+logger: <RootLogger root (NOTSET)>
+data_definition: WFLW
+test_file: test.tsv
+aug_prob: 1.0
+val_epoch: 1
+valset: test.tsv
+norm_type: default
+encoder_type: default
+decoder_type: default
+betas: [0.9, 0.999]
+train_num_workers: 16
+val_num_workers: 16
+test_num_workers: 0
+add_coord: True
+star_w: 1
+star_dist: smoothl1
+edge_info: ((False, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)), (True, (33, 34, 35, 36, 37, 38, 39, 40, 41)), (True, (42, 43, 44, 45, 46, 47, 48, 49, 50)), (False, (51, 52, 53, 54)), (False, (55, 56, 57, 58, 59)), (True, (60, 61, 62, 63, 64, 65, 66, 67)), (True, (68, 69, 70, 71, 72, 73, 74, 75)), (True, (76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87)), (True, (88, 89, 90, 91, 92, 93, 94, 95)))
+nme_left_index: 60
+nme_right_index: 72
+crop_op: True
+flip_mapping: ([0, 32], [1, 31], [2, 30], [3, 29], [4, 28], [5, 27], [6, 26], [7, 25], [8, 24], [9, 23], [10, 22], [11, 21], [12, 20], [13, 19], [14, 18], [15, 17], [33, 46], [34, 45], [35, 44], [36, 43], [37, 42], [38, 50], [39, 49], [40, 48], [41, 47], [60, 72], [61, 71], [62, 70], [63, 69], [64, 68], [65, 75], [66, 74], [67, 73], [55, 59], [56, 58], [76, 82], [77, 81], [78, 80], [87, 83], [86, 84], [88, 92], [89, 91], [95, 93], [96, 97])
+folder: WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_c48a40b8-f66b-4879-a599-20459d51b621
+work_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_c48a40b8-f66b-4879-a599-20459d51b621
+model_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_c48a40b8-f66b-4879-a599-20459d51b621/model
+log_dir: /work/jiewenh/openFace/OpenFace-3.0/STAR/WFLW/WFLW_256x256_adam_ep500_lr0.001_bs32_STARLoss_v2_AAM_c48a40b8-f66b-4879-a599-20459d51b621/log
+train_tsv_file: ./WFLW/train.tsv
+train_pic_dir: ./WFLW/WFLW_images
+val_tsv_file: ./WFLW/test.tsv
+val_pic_dir: ./WFLW/WFLW_images
+test_tsv_file: ./WFLW/test.tsv
+test_pic_dir: ./WFLW/WFLW_images
+device_id: 0
+device: cuda:0
+use_gpu: True
